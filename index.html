@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Per la mia Valentina ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6e6; /* Rosa pastello */
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 { color: #d63384; margin-bottom: 20px; }
+
+        img {
+            width: 200px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            position: relative;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #si { background-color: #4CAF50; color: white; }
+        #no { background-color: #f44336; color: white; position: relative; }
+
+        #si:hover { transform: scale(1.1); background-color: #45a049; }
+
+        /* Pagina di successo nascosta */
+        #success-message { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="quiz">
+        <img id="main-img" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueG94eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/c76IJLufpN61i/giphy.gif" alt="Gif Carina">
+        <h1>Vuoi essere la mia Valentina? ❤️</h1>
+        <div class="buttons">
+            <button id="si" onclick="mostraSuccesso()">SÌ!</button>
+            <button id="no" onmouseover="scappa()">No</button>
+        </div>
+    </div>
+
+    <div class="container" id="success-message">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueG94eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTfO6uCAnpXwLm/giphy.gif" alt="Love">
+        <h1>Sapevo che avresti detto di sì! 🥰</h1>
+        <p>Ti amo tantissimo!</p>
+    </div>
+
+    <script>
+        function scappa() {
+            const btnNo = document.getElementById('no');
+            // Genera posizioni casuali
+            const x = Math.random() * (window.innerWidth - btnNo.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btnNo.offsetHeight);
+            
+            btnNo.style.position = 'fixed';
+            btnNo.style.left = x + 'px';
+            btnNo.style.top = y + 'px';
+        }
+
+        function mostraSuccesso() {
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
