@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San valentino</title>
+    <title>San Valentino</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -13,7 +13,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #ffe6e6; /* Rosa pastello */
+            background-color: #ffe6e6; 
             text-align: center;
         }
 
@@ -22,12 +22,14 @@
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            max-width: 400px;
         }
 
         h1 { color: #d63384; margin-bottom: 20px; }
 
         img {
-            width: 200px;
+            width: 250px; /* Leggermente più grande per la tua immagine */
+            height: auto;
             border-radius: 15px;
             margin-bottom: 20px;
         }
@@ -53,14 +55,14 @@
 
         #si:hover { transform: scale(1.1); background-color: #45a049; }
 
-        /* Pagina di successo nascosta */
         #success-message { display: none; }
     </style>
 </head>
 <body>
 
     <div class="container" id="quiz">
-        <img id="main-img" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueG94eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/c76IJLufpN61i/giphy.gif" alt="Gif Carina">
+        <img id="main-img" src="sv.png" alt="Cuori San Valentino">
+        
         <h1>Vuoi essere la mia Valentina? ❤️</h1>
         <div class="buttons">
             <button id="si" onclick="mostraSuccesso()">SÌ!</button>
@@ -69,15 +71,14 @@
     </div>
 
     <div class="container" id="success-message">
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueG94eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l41lTfO6uCAnpXwLm/giphy.gif" alt="Love">
+        <img id="main-img" src="sv.png" alt="Cuori San Valentino">
         <h1>Sapevo che avresti detto di sì! 🥰</h1>
-        <p>Ti amo tantissimo!</p>
+        <p>GODOOOOOOOOOOO</p>
     </div>
 
     <script>
         function scappa() {
             const btnNo = document.getElementById('no');
-            // Genera posizioni casuali
             const x = Math.random() * (window.innerWidth - btnNo.offsetWidth);
             const y = Math.random() * (window.innerHeight - btnNo.offsetHeight);
             
